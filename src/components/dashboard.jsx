@@ -6,6 +6,9 @@ import Home from "../routes/Home";
 import Account from "../routes/Account";
 import Payments from "../routes/Payments";
 import Subscription from "../routes/Subscription";
+import Schedule from "../routes/Schedule";
+import Servicehistory from "../routes/Servicehistory";
+import Servicereport from "../routes/Servicereport";
 import Support from "../routes/Support";
 import FAQ from "../routes/FAQ";
 const Dashboard = () => {
@@ -19,6 +22,9 @@ const Dashboard = () => {
     account: false,
     payments: false,
     Subscription: false,
+    Schedule: false,
+    Servicehistory: false,
+    Servicereport: false,
     support: false,
     faq: false,
   });
@@ -207,6 +213,39 @@ const Dashboard = () => {
               <a
                 href="#!"
                 class="flex items-center p-2 text-white"
+                onClick={() => handleClick("Servicehistory")}
+              >
+                <span class="flex-1 ml-3 whitespace-nowrap">
+                  Service History
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="flex items-center p-2 text-white"
+                onClick={() => handleClick("Servicereport")}
+              >
+                <span class="flex-1 ml-3 whitespace-nowrap">
+                  Service Report
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="flex items-center p-2 text-white"
+                onClick={() => handleClick("Schedule")}
+              >
+                <span class="flex-1 ml-3 whitespace-nowrap">
+                  Schedule Your Service
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="flex items-center p-2 text-white"
                 onClick={() => handleClick("support")}
               >
                 <span class="flex-1 ml-3 whitespace-nowrap">
@@ -214,6 +253,7 @@ const Dashboard = () => {
                 </span>
               </a>
             </li>
+            
             <li>
               <a
                 href="#!"
@@ -240,6 +280,9 @@ const Dashboard = () => {
         {componentStates.account && <Account />}
         {componentStates.payments && <Payments />}
         {componentStates.Subscription && <Subscription />}
+        {componentStates.Schedule && <Schedule />}
+        {componentStates.Servicehistory && <Servicehistory />}
+        {componentStates.Servicereport && <Servicereport />}
         {componentStates.support && <Support />}
         {componentStates.faq && <FAQ />}
       </div>
