@@ -1,192 +1,161 @@
 import React from "react";
 
-const ServiceForm = () => {
+const Schedule = () => {
   return (
-    <div className="container mx-auto mt-10">
-      
-      <form className="max-w-md mx-auto ">
-        <div className="mb-6">
+    <>
+      <div class="flex justify-center items-center mt-2">
+        <div class="bg-white shadow-lg rounded-lg px-4 py-2">
+          <h1 class="text-3xl font-bold mb-1  text-center ">
+            Raise Your Maintenance Query Ticket
+          </h1>
+
+          <hr />
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="serviceType"
+            for="message"
+            class="block mb-2 mt-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Service Type
+            Your Address
           </label>
-          <div className="relative">
-            <select
-              id="serviceType"
-              name="serviceType"
-              className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            >
-              <option value="">---Select---</option>
-              <option value="">Electrical & Electronics Maintenance</option>
-              <option value="">Plumbing Maintenance</option>
-              <option value="">Computer System Maintenance</option>
-              <option value="">Plumbing Maintenance</option>
-              <option value="">
-                Housekeeping Services (Cleaning Services)
-              </option>
-              <option value="">Gardening Services</option>
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <svg
-                className="fill-current h-4 w-4"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              ></svg>
-            </div>
-          </div>
-        </div>
-        <div className="mb-6 ">
+          <textarea
+            id="message"
+            rows="2"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Enter Your Address"
+          ></textarea>
+
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="preferredTimeSlot"
+            for="countries"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Preferred Time Slot
+            Type
           </label>
-          <div className="table-responsive">
-            <table className="border-collapse border border-black">
-              <thead>
+          <select
+            id="Type"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option>--Select--</option>
+            <option>Electrical & Electronics Maintenance</option>
+            <option>Plumbing Maintenance</option>
+            <option>Computer System Maintenance</option>
+            <option>Carpenter Services</option>
+            <option>Housekeeping Services (Cleaning Services)</option>
+            <option>Gardening Services</option>
+          </select>
+
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Your message
+          </label>
+          <textarea
+            id="message"
+            rows="3"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Enter Manually"
+          ></textarea>
+
+          <div className="relative overflow-x-auto mt-4 mb-4">
+            <table className="w-full text-sm text-left text-gray-500 dark:text-gray-900">
+              <thead className="text-xs text-white  bg-gray-900 dark:bg-gray-900 dark:text-gray-400">
                 <tr>
-                  <th className="px-4 py-2 bg-gray-900 text-white">Today</th>
-                  <th className="px-4 py-2 bg-gray-900 text-white">Tomorrow</th>
+                  <th scope="col" className="px-6 py-3 rounded-l-lg">
+                    Today
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Tomorrow
+                  </th>
                 </tr>
               </thead>
-
               <tbody>
-                <tr>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="anytimeToday"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="anytimeToday">Anytime</label>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime" />
+                    <label htmlFor="time-anytime" className="ml-2">
+                      Anytime
+                    </label>
                   </td>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="anytimeTomorrow"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="anytimeTomorrow">Anytime</label>
+                  <td className="px-6 py-2 font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime-2" />
+                    <label htmlFor="time-anytime-2" className="ml-2">
+                      Anytime
+                    </label>
                   </td>
                 </tr>
-                <tr>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="nowToday"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="nowToday">Now</label>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="px-6  font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime" />
+                    <label htmlFor="time-anytime" className="ml-2">
+                      Now
+                    </label>
                   </td>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="nowTomorrow"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="nowTomorrow">10:00am to 12:00pm</label>
+                  <td className="px-6  font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime-2" />
+                    <label htmlFor="time-anytime-2" className="ml-2">
+                      10:00am to 12:00am
+                    </label>
                   </td>
                 </tr>
-                <tr>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="within2to3Today"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="within2to3Today">Within 2 to 3 hours</label>
+
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime" />
+                    <label htmlFor="time-anytime" className="ml-2">
+                      Within 2 to 3 hours
+                    </label>
                   </td>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="within2to3Tomorrow"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="within2to3Tomorrow">
+                  <td className="px-6 py-2 font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime-2" />
+                    <label htmlFor="time-anytime-2" className="ml-2">
                       12:00pm to 03:00pm
                     </label>
                   </td>
                 </tr>
-                <tr>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="within3to6Today"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="within3to6Today">Within 3 to 6 hours</label>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="px-6  font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime" />
+                    <label htmlFor="time-anytime" className="ml-2">
+                      Within 3 to 6 hours
+                    </label>
                   </td>
-                  <td className="px-4 py-2">
-                    <input
-                      type="radio"
-                      id="within3to6Tomorrow"
-                      name="preferredTimeSlot"
-                      className="mr-2"
-                    />
-                    <label htmlFor="within3to6Tomorrow">
-                      03:00pm to 06:00pm
+                  <td className="px-6  font-medium text-gray-900">
+                    <input type="radio" name="time" id="time-anytime-2" />
+                    <label htmlFor="time-anytime-2" className="ml-2">
+                      03:00pm to 06:00 pm
                     </label>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
 
-        <div className="mb-6">
+          <hr />
+          <br />
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="problem"
-          >
-            Problem
-          </label>
-          <textarea
-            id="problem"
-            name="problem"
-            className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            placeholder="Enter Manually"
-            rows="3"
-          ></textarea>
-        </div>
-
-        <div className="mb-6">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="message"
+            for="message"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Any Message
           </label>
           <textarea
             id="message"
-            name="message"
-            placeholder="(Up to 100 words only)"
-            className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             rows="3"
-            maxLength="100"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Upto 100 words only"
           ></textarea>
-        </div>
 
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Submit
-          </button>
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="text-white mt-3 text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+          </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default ServiceForm;
+export default Schedule;

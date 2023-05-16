@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/dashboard.css";
+import { Link} from "react-router-dom";
+
 function Home() {
   return (
     <>
@@ -10,9 +12,9 @@ function Home() {
           partner
         
           </p>
-            <div className="text-blue-600 text-2xl mt-6 hover:text-blue-700 text-center">
+        <Link to="/Schedule">   <div className="text-blue-600 text-2xl mt-6 hover:text-blue-700 text-center">
         Raise your service ticket now
-        </div> 
+        </div> </Link> 
         </div>
       </div>
       
