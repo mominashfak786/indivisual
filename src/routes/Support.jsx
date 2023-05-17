@@ -7,10 +7,11 @@ const Support = () => {
         <div class="bg-white shadow-lg rounded-lg px-4 py-2">
           <h1 class="text-3xl font-bold mb-1  text-center ">Contact Us</h1>
           <p class="mb-1">
-            If you have any questions, please raise a ticket or email us at:
+            If you have any questions related to your subscription and account
+            raise ticket:
           </p>
-          <p class="text-lg font-medium mb-1">partner@letusmaintain.com</p>
-          <p class="mb-1">Your relationship manager is: xxxxxxxxxx</p>
+          <p class="text-lg font-medium mb-1">service@letusmaintain.com</p>
+          <p class="mb-1">Service Center: xxxxxxxxxx</p>
 
           <hr />
 
@@ -38,11 +39,14 @@ const Support = () => {
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
             <option>--Select--</option>
+            <option>Services</option>
             <option>Account</option>
-            <option>Payouts</option>
+            <option>Payment</option>
+            <option>Other</option>
+            <option>Add on Service</option>
             <option>Complaint</option>
             <option>Question</option>
-            <option>Other</option>
+            <option>Add on Service</option>
           </select>
 
           <label
@@ -71,14 +75,13 @@ const Support = () => {
             type="file"
           />
           <div class="flex justify-center">
-  <button
-    type="submit"
-    class="text-white mt-3 text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-  >
-    Submit
-  </button>
-</div>
-
+            <button
+              type="submit"
+              class="text-white mt-3 text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </>

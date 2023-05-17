@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Schedule = () => {
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
+
+  const handleDateChange = (event) => {
+    setSelectedDate(event.target.value);
+  };
+
+  const handleTimeChange = (event) => {
+    setSelectedTime(event.target.value);
+  };
   return (
     <>
       <div class="flex justify-center items-center mt-2">
@@ -130,6 +140,28 @@ const Schedule = () => {
           </div>
 
           <hr />
+          <div className="flex flex-col gap-4 mt-3">
+      <label className="text-lg font-semibold">Date:</label>
+      <input
+        type="date"
+        value={selectedDate}
+        onChange={handleDateChange}
+        className="input input-bordered"
+      />
+
+      <label className="text-lg font-semibold ">Time:</label>
+      <input
+        type="time"
+        value={selectedTime}
+        onChange={handleTimeChange}
+        className="input input-bordered"
+      />
+
+      <div className="flex justify-between">
+        <p className="text-lg">Selected Date: {selectedDate}</p>
+        <p className="text-lg">Selected Time: {selectedTime}</p>
+      </div>
+    </div>
           <br />
           <label
             for="message"
