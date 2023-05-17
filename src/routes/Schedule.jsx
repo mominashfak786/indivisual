@@ -140,13 +140,13 @@ const Schedule = () => {
           </div>
 
           <hr />
-          <div className="flex flex-col gap-4 mt-3">
+          <div className="flex flex-col gap-1 mt-3 w-full">
       <label className="text-lg font-semibold">Date:</label>
       <input
         type="date"
         value={selectedDate}
         onChange={handleDateChange}
-        className="input input-bordered"
+        className="input input-bordered w-full"
       />
 
       <label className="text-lg font-semibold ">Time:</label>
@@ -154,13 +154,8 @@ const Schedule = () => {
         type="time"
         value={selectedTime}
         onChange={handleTimeChange}
-        className="input input-bordered"
+        className="input input-bordered w-full"
       />
-
-      <div className="flex justify-between">
-        <p className="text-lg">Selected Date: {selectedDate}</p>
-        <p className="text-lg">Selected Time: {selectedTime}</p>
-      </div>
     </div>
           <br />
           <label

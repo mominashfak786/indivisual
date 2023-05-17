@@ -8,9 +8,9 @@ const Support = () => {
           <h1 class="text-3xl font-bold mb-1  text-center ">Contact Us</h1>
           <p class="mb-1">
             If you have any questions related to your subscription and account
-            raise ticket:
+            raise ticket
           </p>
-          <p class="text-lg font-medium mb-1">service@letusmaintain.com</p>
+          <p class="text-lg font-medium mb-1"> Email us : service@letusmaintain.com</p>
           <p class="mb-1">Service Center: xxxxxxxxxx</p>
 
           <hr />
